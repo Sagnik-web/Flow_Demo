@@ -28,12 +28,9 @@ const nodeTypes = { textUpdater: NodeType };
 
 
 
-// toast-configuration method,
-// it is compulsory method.
-// toast.configure();
+
 
 const App=()=>  {
-  // render() {
     const [show,setShow]=useState(true)    
 
     
@@ -80,6 +77,7 @@ const App=()=>  {
       (params) => setEdges((eds) => addEdge(params, eds)),
       [],
     );
+
   
     const onDragOver = useCallback((event) => {
       event.preventDefault();
@@ -117,7 +115,7 @@ const App=()=>  {
     );
   
 
-
+    // Demo of Save Flow Function. After Check, We can Call Api to save the flow Data
     const SaveData=async()=>{
       const sourceArr =edges.map(el=>el.source)
       const taggetArr =edges.map(el=>el.target)
@@ -181,7 +179,6 @@ const App=()=>  {
     </div>
     </>
     );
-  // }
 }
 
 export default App;
